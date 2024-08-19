@@ -77,6 +77,17 @@ class Api {
   getLucky() {
     return this.http.post('/growth_api/v1/lottery_lucky/my_lucky')
   }
+
+  /**
+   * @desc 抽奖
+   * @returns {Promise<*>}
+   * {
+   *   lottery_name: 奖品名称
+   * }
+   */
+  getDraw() {
+    return this.http.post('/growth_api/v1/lottery/draw?aid=')
+  }
 }
 
 module.exports = Api
